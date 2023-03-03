@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700&family=Outfit:wght@300;400;600&display=swap"
+    rel="stylesheet">
+  <title>Frontend Mentor | NFT preview card component</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    * {
+      padding: 0;
+      margin: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      font-size: 62.5%;
+    }
+
+    body {
+      font-family: 'Outfit', sans-serif;
+      height: 100vh;
+      width: 100vw;
+      background-color: hsl(217, 54%, 11%);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    main {
+      width: 90%;
+      margin: auto;
+      height: contain;
+      padding: 2rem;
+      border-radius: 1rem;
+      background-color: hsl(216, 50%, 16%);
+    }
+
+    .collection-image {
+      width: 100%;
+      position: relative;
+    }
+
+    .collection-image .view {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: hsl(178, 100%, 50%, 40%);
+      border-radius: 1rem;
+      transition: 0.5s ease-in;
+      opacity: 0;
+    }
+
+    .collection-image .view:hover {
+      opacity: 1;
+    }
+
+    .collection-image img {
+      width: inherit;
+      border-radius: 1rem;
+    }
+
+    .collection-name {
+      margin: 1.8rem 0;
+    }
+
+    .collection-name h1 {
+      color: hsl(0, 0%, 100%);
+      font-size: 2.3rem;
+      transition: ease-in;
+    }
+
+    .collection-name h1:hover {
+      color: hsl(178, 100%, 50%);
+      cursor: pointer;
+    }
+
+    .collection-description p {
+      font-size: 1.7rem;
+      word-spacing: .2rem;
+      line-height: 2.2rem;
+      color: hsl(215, 51%, 70%);
+      font-weight: 400;
+    }
+
+    .price-date {
+      display: flex;
+      margin: 1.5rem 0;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .collection-price {
+      display: flex;
+    }
+
+    .collection-price img {
+      margin: 0 .5rem 0 0;
+    }
+
+    .collection-price p {
+      font-size: 1.3rem;
+      font-weight: 600;
+      color: hsl(178, 100%, 50%);
+    }
+
+    .expiry-date {
+      display: flex;
+    }
+
+
+    .expiry-date p {
+      font-size: 1.4rem;
+      margin: 0 0 0 1rem;
+      color: hsl(215, 51%, 70%);
+    }
+
+    .horizontal-line {
+      margin: 1.4rem 0 0 0;
+      height: 1px;
+      background-color: hsl(215, 32%, 27%);
+    }
+
+    .creator {
+      margin-top: 1.8rem;
+      display: flex;
+      align-items: center;
+    }
+
+    .avator {
+      width: 3rem;
+    }
+
+    .avator img {
+      width: inherit;
+      border-radius: 50%;
+      border: 2px solid white;
+    }
+
+    .avator-name {
+      margin-left: 2rem;
+    }
+
+    .avator-name p {
+      font-size: 1.6rem;
+      letter-spacing: .1rem;
+      color: hsl(215, 51%, 70%);
+    }
+
+    .avator-name span {
+      color: white;
+    }
+
+    .avator-name span:hover {
+      color: hsl(178, 100%, 50%);
+      cursor: pointer;
+    }
+
+    .attribution {
+      font-size: 11px;
+      text-align: center;
+    }
+
+    .attribution a {
+      color: hsl(228, 45%, 44%);
+    }
+
+    @media only screen and (min-width: 500px) {
+      main {
+        width: 412px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <main>
+
+    <div class="collection-image">
+      <div class="view">
+        <div class="view-svg">
+          <img src="./images/icon-view.svg" alt="">
+        </div>
+      </div>
+      <img src="./images/image-equilibrium.jpg" alt="collection image">
+    </div>
+
+    <div class="collection-name">
+      <h1>Equilibrium #3429</h1>
+    </div>
+
+    <div class="collection-description">
+      <p> Our Equilibrium collection promotes balance and calm.</p>
+    </div>
+    <div class="price-date">
+
+      <div class="collection-price">
+        <img src="./images/icon-ethereum.svg" alt="etheruim">
+        <p>0.041 ETH</p>
+      </div>
+
+      <div class="expiry-date">
+        <img src="./images/icon-clock.svg" alt="">
+        <p>3 days left</p>
+      </div>
+
+    </div>
+
+    <div class="horizontal-line">
+
+    </div>
+
+    <div class="creator">
+      <div class="avator">
+        <img src="./images/image-avatar.png" alt="creator Avatar">
+      </div>
+      <div class="avator-name">
+        <p>Creation of <span> Jules Wyvern </span></p>
+      </div>
+    </div>
+
+
+  </main>
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+    Coded by <a href="https://www.frontendmentor.io/profile/jeremyoduromanu">Jeremy Manu</a>.
+  </div>
+</body>
+
+</html>
